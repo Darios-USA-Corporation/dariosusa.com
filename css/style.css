@@ -1,0 +1,164 @@
+:root {
+  --brown: #866241;
+  --dark-beige: #A48466;
+  --light-beige: #CDC1B0;
+  --burgundy: #220000;
+  --white: #E7E7E7;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Barlow;
+  color: #fff;
+  margin: 0 !important;
+  scroll-margin-top: 5rem;
+}
+
+h1 {
+  font-weight: 700;
+  font-family: Lora;
+  text-align: center;
+  font-size: 100px;
+  width: 100%;
+}
+
+h2 {
+  font-weight: 900;
+  font-family: Lora;
+  text-align: center;
+  font-size: 48px;
+  width: 100%;
+}
+
+h3 {
+  font-family: Roboto;
+  text-align: center;
+  color: var(--burgundy);
+  font-weight: bold;
+  font-size: 20px;
+  width: 100%;
+}
+
+hr {
+  height: 2px !important;
+  margin: 0;
+  opacity: 1;
+  width: 50%;
+  margin: 4px 25% 4px 25%;
+}
+
+.burgundy {
+  color: var(--burgundy);
+}
+
+.white {
+  color: var(--white);
+}
+
+li {
+  font-size: 20px;
+  font-weight: 300;
+  color: #fff;
+  font-family: Roboto;
+}
+
+p {
+  text-align: left;
+  font-size: 24px;
+  font-weight: 300;
+  color: #fff;
+  font-family: Roboto;
+}
+
+.bg-brown {
+  background-color: var(--brown);
+}
+
+.bg-dark-beige {
+  background-color: var(--dark-beige);
+}
+
+.background-above-the-fold {
+  background-color: var(--light-beige);
+}
+
+.footer-background {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.title {
+  margin-top: 3%;
+  text-align: center;
+  font-weight: 700;
+  font-size: 45px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.paragraph {
+  font-size: 18px;
+  margin-top: 2%;
+  color: #A48466;
+  font-family: Roboto;
+}
+
+.dropdown-item:hover {
+  background-color: #9ce4f3;
+}
+
+a.nav-link {
+  font-size: 20px;
+  color: #fff !important;
+  padding-top: 10px;
+}
+
+.darios-logo-main {
+  width: 100%;
+  scroll-margin-top: 10rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  img {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  img {
+    display: none;
+  }
+
+  .hide-mobile {
+    display: none;
+  }
+
+  .color-background {
+    min-height: auto;
+  }
+
+  .navbar-brand {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  img {
+    display: initial;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .h-card {
+    width: 100%;
+  }
+}
