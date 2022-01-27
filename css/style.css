@@ -13,6 +13,10 @@ html {
   font-family: Roboto;
 }
 
+b {
+  font-weight: 700;
+}
+
 h1,
 h2,
 h3 {
@@ -49,10 +53,37 @@ h3 {
 
 hr {
   height: 2px !important;
-  margin: 0;
   opacity: 1;
   width: 50%;
   margin: 4px 25% 4px 25%;
+}
+
+.mapouter {
+  position: relative;
+  text-align: right;
+  height: 500px;
+  width: 600px;
+}
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 500px;
+  width: 600px;
+}
+
+.hours {
+  font-size: 36px;
+}
+
+.days {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+
+.location {
+  font-size: 30px;
 }
 
 .burgundy {
@@ -86,7 +117,7 @@ p {
   background-color: var(--dark-beige);
 }
 
-.background-above-the-fold {
+.bg-light-beige {
   background-color: var(--light-beige);
 }
 

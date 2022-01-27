@@ -1,40 +1,48 @@
 <div class="container">
+    <div style="width: 50%; margin-left: 25%;">
+        <h1 id="Location" class="text-center">FIND US</h1>
+        <hr class="white">
+    </div>
+
     <div class="row">
         <div class="col">
-            <h1 id="Materials">MATERIALS</h1>
-            <hr class="white">
-            <p class="text-center">We supply all the tools and materials necessary to get your job done right.</p>
             <div class="row">
-                <div class="col-4 offset-2">
-                    <ul>
-                        {% for material in materials-left %}
-                            <li><b>{{material[0]}}</b></li>
-                            {% if material[1].length != 0 %}
-                                <ul>
-                                    {% for submaterial in material[1] %}
-                                        <li><i>{{submaterial}}</i></li>
-                                    {% endfor %}
-                                </ul>
-                            {% endif %}
-                        {% endfor %}
-                    </ul>
+                <div class="col my-5">
+                    <p class="location text-center">
+                        <b>Dario’s USA Corp</b><br>
+                        <i>7655 W 2nd Ct</i><br>
+                        <i>Hialeah, FL 33014</i>
+                    </p>
+                    {% include map.html %}
                 </div>
-                <div class="col-4 offset-1">
-                    {% for material in materials-right %}
-                        <li><b>{{material[0]}}</b></li>
-                        {% if material[1].length != 0 %}
-                            <ul>
-                                {% for submaterial in material[1] %}
-                                    <li><i>{{submaterial}}</i></li>
-                                {% endfor %}
-                            </ul>
-                        {% endif %}
-                    {% endfor %}
+                <div class="col">
+                    <div class="row m-5">
+                        <div class="col-4">
+                            <p class="days">
+                                Monday<br>
+                                Tuesday<br>
+                                Wednesday<br>
+                                Thursday<br>
+                                Friday<br>
+                                Saturday<br>
+                                Sunday<br>
+                            </p>
+                        </div>
+                        <div class="col-8">
+                            <p class="hours text-center">
+                                <i>8:00 AM - 4:00 PM</i><br>
+                                <i>8:00 AM - 4:00 PM</i><br>
+                                <i>8:00 AM - 4:00 PM</i><br>
+                                <i>8:00 AM - 4:00 PM</i><br>
+                                <i>8:00 AM - 4:00 PM</i><br>
+                                <i>8:00 AM - 12:00 PM</i><br>
+                                <i>CLOSED</i><br>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col offset-1 hide-mobile">
-            <img class="col" src="imgs/kitchen.png" width="100%" alt="Light brown kitchen">
-        </div>
     </div>
+    
 </div>
