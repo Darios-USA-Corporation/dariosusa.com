@@ -11,6 +11,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1"
+    "@11ty/eleventy": "^0.12.1",
+    "http-server": "^0.11.1"
+  },
+  "dependencies": {
+    "static.email.ses": "^0.1.3",
+    "dotenv": "^8.1.0"
   }
 }

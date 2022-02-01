@@ -2,3 +2,4 @@
 node_modules/
 # Site build output
 _site/
+.vercel

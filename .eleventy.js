@@ -7,6 +7,8 @@ module.exports = function(eleventyConfig) {
     "svg",
     "html"
   ]);
+  // Copy JavaScript files
+  eleventyConfig.addPassthroughCopy('./js/');
     return {
       dir: {
         // This allows us to use includes and layouts from the parent TTM site.
