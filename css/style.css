@@ -6,6 +6,12 @@
   --white: #E7E7E7;
 }
 
+.btn-burgundy {
+  color: var(--white);
+  background-color: var(--burgundy);
+  border-color: var(--burgundy);
+}
+
 body,
 html {
   margin: 0;
