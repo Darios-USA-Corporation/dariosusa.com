@@ -67,29 +67,25 @@ hr {
 .mapouter {
   position: relative;
   text-align: right;
-  height: 300px;
-  width: 600px;
 }
 
 .gmap_canvas {
   overflow: hidden;
   background: none !important;
-  height: 300px;
-  width: 600px;
 }
 
 .hours {
-  font-size: 36px;
+  font-size: 3vh;
 }
 
 .days {
-  font-size: 36px;
+  font-size: 3vh;
   font-weight: 700;
 }
 
 
 .location {
-  font-size: 30px;
+  font-size: 2rem;
 }
 
 .burgundy {
@@ -142,17 +138,6 @@ p {
   padding-bottom: 2%;
 }
 
-.paragraph {
-  font-size: 18px;
-  margin-top: 2%;
-  color: #A48466;
-  font-family: Roboto;
-}
-
-.dropdown-item:hover {
-  background-color: #9ce4f3;
-}
-
 a.nav-link {
   font-size: 20px;
   color: #fff !important;
@@ -164,15 +149,41 @@ a.nav-link {
   scroll-margin-top: 10rem;
 }
 
+.map {
+  width: 600px;
+  height: 300px;
+}
+
 @media only screen and (max-width: 1000px) {
   img {
     display: none;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 16px;
   }
 }
 
 @media only screen and (max-width: 600px) {
   img {
     display: none;
+  }
+
+  map {
+    width: 400px;
+    height: 250px;
   }
 
   .hide-mobile {
@@ -197,5 +208,17 @@ a.nav-link {
 @media only screen and (max-width: 400px) {
   .h-card {
     width: 100%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 20px;
   }
 }
