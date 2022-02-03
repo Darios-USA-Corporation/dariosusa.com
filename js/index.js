@@ -50,8 +50,9 @@ ${md}`
       }
     });
     function thanks() {
-      var div = document.createElement('div');
-      div.textContent = 'Thank you for your message! We will get back to you soon.';
-      contact.parentNode.replaceChild(div, contact);
+      var p = document.createElement('p');
+      p.textContent = 'Thank you for your message! We will get back to you soon.';
+      p.className = 'text-center burgundy';
+      contact.parentNode.replaceChild(p, contact);
     }
   }(StaticEmail));
