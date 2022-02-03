@@ -4,36 +4,54 @@ StaticEmail = (function (StaticEmail) {
       event.preventDefault();
       var from = contact.from.value.trim();
       var md = contact.md.value.trim();
+      var name = contact.name.value.trim();
+      var subject = contact.subject.value.trim();
+      // optional params
+      var phone = contact.phone.value.trim();
+      var address = contact.address.value.trim();
+      phone = (phone) ? phone : 'Not specified';
+      address = (address) ? address : 'Not specified';
+
       if (from && md) {
         contact.submit.disabled = true;
         StaticEmail({
           path: '/api/paperboy',
-          subject: 'Contact from ' + from,
+          subject: (subject) ? subject : 'New message from ' + from + ' through your website\'s contact form.',
           from: from,
-          md: md
+          md: 
+`A visitor to your site, **dariosusa.com**, has left you a message through your contact form.
+
+**Please send replies to the sender's email address in a new email thread. Do not reply to this email. This inbox is not monitored.**
+
+---
+
+# Sender Info
+
+* Name: **${name}**
+
+* Email: **${from}**
+
+* Phone: **${phone}**
+
+* Address: **${address}**
+
+---
+
+# Message:
+${md}`
         })
         .then(
           thanks,
           function (error) {
-            // this check is to make code testable via http-server
-            if (
-              error.message === 'Method Not Allowed'
-              // handle 405 errors as either OK (75%) or errors
-              // if you don't want errors, comment the following line
-              && Math.random() < .75
-            )
-              thanks();
-            else {
-              alert("There was an issue sending your message. Please try sending it again.");
-              contact.submit.disabled = false;
-            }
+            alert(error);
+            contact.submit.disabled = false;
           }
         );
       }
     });
     function thanks() {
       var div = document.createElement('div');
-      div.textContent = 'Thank You!';
+      div.textContent = 'Thank you for your message! We will get back to you soon.';
       contact.parentNode.replaceChild(div, contact);
     }
   }(StaticEmail));

@@ -1,13 +1,25 @@
-
-<script defer src="//unpkg.com/static.email"></script>
-<script defer src="js/index.js"></script>
-<h1>A Static Email Form Example</h1>
+<h1>GET IN TOUCH</h1>
 <fieldset>
-<legend>Contact Me</legend>
 <form id="contact">
     <label>
-    Your email address
+    Your email address *
     <input name="from" type="email" required>
+    </label>
+    <label>
+    Subject *
+    <input name="subject" type="10" required>
+    </label>
+    <label>
+    Your name *
+    <textarea name="name" rows="10" required></textarea>
+    </label>
+    <label>
+    Your phone number
+    <textarea name="phone" rows="10"></textarea>
+    </label>
+    <label>
+    Your address
+    <textarea name="address" rows="10"></textarea>
     </label>
     <label>
     Your message (Markdown allowed)
