@@ -1,19 +1,23 @@
+const i18n = require('eleventy-plugin-i18n');
+const translations = require('./_data/i18n');
+
 module.exports = function(eleventyConfig) {
-  eleventyConfig.setTemplateFormats([
-    "css",
-    "scss",
-    "png",
-    "jpeg",
-    "svg",
-    "html"
-  ]);
-  // Copy JavaScript files
+  // Copy files
   eleventyConfig.addPassthroughCopy('./js/');
-    return {
-      dir: {
-        // This allows us to use includes and layouts from the parent TTM site.
-        includes: "_includes",
-        layouts: "_layouts"
-      }
+  eleventyConfig.addPassthroughCopy('./imgs/');
+  eleventyConfig.addPassthroughCopy('./css/');
+  eleventyConfig.addPlugin(i18n, {
+    translations,
+    fallbackLocales: {
+      'es': 'en-US'
     }
-  };
+  });
+  return {
+    dir: {
+      includes: "_includes",
+      layouts: "_layouts",
+      data: "_data"
+    }
+  }
+};
+  
