@@ -98,6 +98,10 @@ module.exports = {
     language: {
         'en-US': 'Español',
         'es': 'English'
+    },
+    closed: {
+        'en-US': 'CLOSED',
+        'es': 'CERRADO'
     }
 
 }
