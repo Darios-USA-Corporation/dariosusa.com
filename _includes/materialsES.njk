@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 id="Materials">{{'materials' | i18n}}</h1>
+            <hr class="white">
+            <p class="text-center">{{'materialsSubtitle' | i18n}}</p>
+            <div class="row">
+                <div class="col-5">
+                    <ul>
+                        {% for material, submaterials in materialsLeftES %}
+                            <li><b>{{material}}</b></li>
+                            {% if submaterials.length != 0 %}
+                                <ul>
+                                    {% for submaterial in submaterials %}
+                                        <li><i>{{submaterial}}</i></li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="col-4 offset-1">
+                        {% for material, submaterials in materialsRightES %}
+                            <li><b>{{material}}</b></li>
+                            {% if submaterials.length != 0 %}
+                                <ul>
+                                    {% for submaterial in submaterials %}
+                                        <li><i>{{submaterial}}</i></li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                        {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="col offset-1 hide-mobile">
+            <img class="col" src="/imgs/kitchen.png" width="100%" alt="Light brown kitchen">
+        </div>
+    </div>
+</div>

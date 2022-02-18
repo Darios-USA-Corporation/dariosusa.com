@@ -1,0 +1,51 @@
+<div class="container">
+    <div>
+        <h1 id="Contact" class="text-center burgundy pt-5">{{ 'contactUs' | i18n }}</h1>
+        <hr class="burgundy mb-3">
+        <p class="text-center burgundy mb-5">{{ 'contactUsSubtitle' | i18n | safe }}</p>
+    </div>
+    <fieldset>
+    <form id="contact">
+        <div class="mb-3 burgundy text-center"><b>{{ 'requiredFields' | i18n }}</b></div>
+        <div class="row">
+            <div class="col">
+                <div class="mb-3">
+                    <label for="emailInput" class="form-label">{{ 'email' | i18n }}</label>
+                    <input id="emailInput" class="form-control" name="from" type="email" required aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">{{ 'emailSubtitle' | i18n }}</div>
+                </div> 
+            </div>
+            <div class="col">
+                <div class="mb-3">
+                    <label for="nameInput" class="form-label">{{ 'name' | i18n }}</label>
+                    <input id="nameInput" class="form-control" name="name" required>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="mb-3">
+                    <label for="phoneInput" class="form-label">{{ 'phone' | i18n }} <span class="form-text">{{ 'optional' | i18n }}</span></label>
+                    <input id="phoneInput" class="form-control" name="phone" type="tel">
+                </div>
+            </div>
+            <div class="col">
+                <div class="mb-3">
+                    <label for="addressInput" class="form-label">{{ 'address' | i18n }} <span class="form-text">{{ 'optional' | i18n }}</span></label>
+                    <input id="addressInput" class="form-control" name="address">
+                </div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="subjectInput" class="form-label">{{ 'subject' | i18n }}</label>
+            <input id="subjectInput" class="form-control" name="subject" required>
+        </div>
+        <div class="mb-3">
+            <label for="mdInput" class="form-label">{{ 'message' | i18n }}</label>
+            <textarea id="mdInput" class="form-control" name="md" rows="10" placeholder="{{ 'messageSubtitle' | i18n }}" required></textarea>
+        </div>
+        <div id="recaptcha"></div>
+        <button type="submit" class="btn btn-burgundy">{{ 'submit' | i18n }}</button>
+    </form>
+    </fieldset>
+</div>

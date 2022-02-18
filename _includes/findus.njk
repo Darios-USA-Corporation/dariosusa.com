@@ -1,6 +1,6 @@
 <div class="container">
-    <div style="width: 50%; margin-left: 25%;">
-        <h1 id="Location" class="text-center">FIND US</h1>
+    <div>
+        <h1 id="Location" class="text-center">{{ 'findUs' | i18n | safe }}</h1>
         <hr class="white">
     </div>
 
@@ -13,19 +13,13 @@
                         <i>7655 W 2nd Ct</i><br>
                         <i>Hialeah, FL 33014</i>
                     </p>
-                    {% include map.html %}
+                    {% include 'map.njk' %}
                 </div>
                 <div class="col">
                     <div class="row my-5">
                         <div class="col-4">
                             <p class="days">
-                                Monday<br>
-                                Tuesday<br>
-                                Wednesday<br>
-                                Thursday<br>
-                                Friday<br>
-                                Saturday<br>
-                                Sunday<br>
+                                {{ 'dates' | i18n | safe }}
                             </p>
                         </div>
                         <div class="col-8">
@@ -36,7 +30,7 @@
                                 <i>8:00 AM - 4:00 PM</i><br>
                                 <i>8:00 AM - 4:00 PM</i><br>
                                 <i>8:00 AM - 12:00 PM</i><br>
-                                <i>CLOSED</i><br>
+                                <i>CERRADO</i><br>
                             </p>
                         </div>
                     </div>

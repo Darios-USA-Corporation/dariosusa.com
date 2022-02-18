@@ -10,19 +10,23 @@
     <div class="collapse navbar-collapse" id="navbarDarios">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" href="/#Home">Home</a>
+          <a class="nav-link" href="{{ 'pageSlug' | i18n }}"><b>{{ 'language' | i18n }}</b></a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="/#Materials">Materials</a>
+          <a class="nav-link" href="#Home">{{ 'navHome' | i18n }}</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="/#Location">Location</a>
+          <a class="nav-link" href="#Materials">{{ 'navMaterials' | i18n }}</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#Location">{{ 'navLocation' | i18n }}</a>
         </li>
 
         <li class="nav-item me-5">
-          <a class="nav-link" href="/#Contact">Contact Us</a>
+          <a class="nav-link" href="#Contact">{{ 'navContact' | i18n }}</a>
         </li>
       </ul>
     </div>
