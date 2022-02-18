@@ -1,0 +1,35 @@
+---
+layout: default
+title: Dario's USA
+---
+
+<div class="bg-light-beige container-fluid py-md-1 mt-5">
+    <div class="col-8 offset-2 col-md-4 offset-md-4 py-5">
+        <div>
+            <img id="Home" class="darios-logo-main" src="/imgs/darios-logo.svg" alt="Dario's USA Corporation"/> 
+        </div>
+        <div>
+            <h2 class="burgundy">{{ 'carpentry' | i18n }}</h2>
+            <hr class="burgundy">
+            <h3>{{ 'carpentrySubtitle' | i18n }}</h3>
+        </div>
+    </div>
+</div>
+
+<div class="bg-dark-beige">
+    <section class="py-5">
+        {% include 'materials.njk' %}
+    </section>
+</div>
+<div class="bg-brown">
+    <!-- FIND US -->
+    <section class="py-5">
+        {% include 'findus.njk' %}
+    </section> 
+</div>
+<div class="bg-light-beige">
+    <!-- GET IN TOUCH -->
+    <section class="pb-5">
+        {% include 'contact.njk' %}
+    </section>
+</div>
